@@ -1,0 +1,23 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "A service for parsing different time format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksmai/timestamp.git"
+  },
+  "keywords": [
+    "time",
+    "timestamp"
+  ],
+  "author": "ksmai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksmai/timestamp/issues"
+  },
+  "homepage": "https://github.com/ksmai/timestamp#readme"
+}
