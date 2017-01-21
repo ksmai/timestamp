@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/ksmai/timestamp/issues"
   },
-  "homepage": "https://github.com/ksmai/timestamp#readme"
+  "homepage": "https://github.com/ksmai/timestamp#readme",
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "browserify": "13.3.0",
+    "gulp": "3.9.1",
+    "gulp-browserify": "0.5.1",
+    "gulp-mocha": "3.0.1",
+    "mocha": "3.2.0"
+  }
 }
