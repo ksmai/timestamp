@@ -4,7 +4,9 @@
   "description": "A service for parsing different time format",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "gulp test",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -21,12 +23,17 @@
   },
   "homepage": "https://github.com/ksmai/timestamp#readme",
   "dependencies": {
-    "express": "4.14.0"
+    "chrono-node": "1.2.5",
+    "express": "4.14.0",
+    "moment": "2.17.1",
+    "moment-precise-range-plugin": "1.2.1",
+    "wagner-core": "0.2.0"
   },
   "devDependencies": {
     "browserify": "13.3.0",
     "gulp": "3.9.1",
     "gulp-browserify": "0.5.1",
+    "gulp-minify-html": "1.0.6",
     "gulp-mocha": "3.0.1",
     "mocha": "3.2.0"
   }
