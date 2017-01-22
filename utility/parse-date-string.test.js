@@ -90,15 +90,15 @@ describe('parseDateStr', function() {
     for(let time of times) {
       let d = parseDateStr( date + time.str );
       assert.ok( !!d );
-      assert.equal( d.getHours(), time.h || 0 );
-      assert.equal( d.getMinutes(), time.m || 0 );
-      assert.equal( d.getSeconds(), time.s || 0 );
+      assert.equal( d.getUTCHours(), time.h || 0 );
+      assert.equal( d.getUTCMinutes(), time.m || 0 );
+      assert.equal( d.getUTCSeconds(), time.s || 0 );
     }
   });
 
   it('understands simple time vocabulary', function() {
     var d = parseDateStr('21-01-17 Noon');
     assert.ok( !!d );
-    assert.equal( d.getHours(), 12 );
+    assert.equal( d.getUTCHours(), 12 );
   });
 });
