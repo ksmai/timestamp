@@ -1,8 +1,7 @@
 'USE STRICT';
-var moment = require('moment');
 
 // takes 2 Date objects, return their difference in various units
-module.exports = function(date1, date2) {
+module.exports = function(moment, date1, date2) {
   if( !date1 || !date2 || !date1.getTime || !date1.getTime() ||
       !date2.getTime || !date2.getTime()
   ) {

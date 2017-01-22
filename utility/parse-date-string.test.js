@@ -1,5 +1,6 @@
 var assert = require('assert');
-var parseDateStr = require('./parse-date-string');
+var chrono = require('chrono-node');
+var parseDateStr = require('./parse-date-string').bind(null, chrono);
 
 describe('parseDateStr', function() {
   it('returns a Date object with valid inputs', function() {

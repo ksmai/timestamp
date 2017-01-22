@@ -1,7 +1,6 @@
 'USE STRICT';
-var chrono = require('chrono-node');
 
-module.exports = function(str) {
+module.exports = function(chrono, str) {
   var date;
   // fall back to built-in Date for unix timestamp
   if( Number(str) ) {
