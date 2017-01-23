@@ -49,52 +49,54 @@
 
         <ul class="list-group">
           <li class="list-group-item">
-          <table class="table">
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.precise" ng-change="update()" checked>
-                  Precise
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.year" ng-change="update()">
-                  Years
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.month" ng-change="update()">
-                  Months
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.day" ng-change="update()">
-                  Days
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.hour" ng-change="update()">
-                  Hours
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.minute" ng-change="update()">
-                  Minutes
-                </label>
-              </th>
-              <th>
-                <label>
-                  <input type="checkbox" ng-model="opts.second" ng-change="update()">
-                  Seconds
-                </label>
-              </th>
-            </tr>
-          </table>
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.precise" ng-change="update()" checked>
+                    Precise Range
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.year" ng-change="update()">
+                    Years
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.month" ng-change="update()">
+                    Months
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.day" ng-change="update()">
+                    Days
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.hour" ng-change="update()">
+                    Hours
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.minute" ng-change="update()">
+                    Minutes
+                  </label>
+                </th>
+                <th>
+                  <label>
+                    <input type="checkbox" ng-model="opts.second" ng-change="update()">
+                    Seconds
+                  </label>
+                </th>
+              </tr>
+            </table>
+          </div>
           </li>
           <li class="list-group-item" ng-show="opts.precise && times.precise">
           <ul class="list-group">

@@ -129,5 +129,6 @@ module.exports = function(moment, date1, date2, debug = false) {
 
     };
   }(moment));
-  return moment.preciseDiff(moment(date1), moment(date2), debug);
+  return moment.preciseDiff(moment(date1), moment(date2), debug) ||
+          'IDENTICAL' ;
 };

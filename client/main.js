@@ -33,7 +33,8 @@ angular.module('timestamp', [])
     $scope.validDates = true;
     for(let i = 0; i < dates.length; i++) {
       dates[i] = parseDateStr($scope.times.inputs[i], true);
-      $scope.validDates = !!($scope.validDates && dates[i]);
+      $scope.validDates = !!($scope.validDates && dates[i] &&
+                              dates[i].getTime() );
       $scope.times.outputs[i] = dates[i] && dates[i].getTime()
                                   ? !!$scope.opts.locales[i]
                                       ? dates[i].toLocaleString()

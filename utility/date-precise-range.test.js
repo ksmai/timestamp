@@ -55,10 +55,21 @@ describe('datePreciseRange', function() {
     }
   });
 
-  it('use plurals appropriately', function() {
+  it('uses plurals appropriately', function() {
     var d1 = new Date(2017, 0, 1, 1, 1, 1);
     var d2 = new Date(2018, 2, 2, 3, 2, 3);
     var diff = datePreciseRange(moment, d1, d2);
     assert.equal( diff, '1 year 2 months 1 day 2 hours 1 minute 2 seconds');
+  });
+
+  it('says "IDENTICAL" when dates are equal', function() {
+    for(let i = 0; i < 100; i++) {
+      let d = new Date(Math.floor(Math.random() * 30) + 1990,
+                       Math.floor(Math.random() * 12),
+                       Math.floor(Math.random() * 20) + 1,
+                       Math.floor(Math.random() * 24)
+      );
+      assert.equal( datePreciseRange(moment, d, d), 'IDENTICAL' );
+    }
   });
 });
