@@ -8,7 +8,7 @@ var datePreciseRange = require('../utility/date-precise-range');
 dateDiff = dateDiff.bind(null, moment);
 datePreciseRange = datePreciseRange.bind(null, moment);
 
-angular.module('timestamp', [])
+angular.module('timestamp', ['ng'])
 .controller('timestampCtrl', function($scope, $interval) {
   $scope.times = {
     inputs: ['', ''],
@@ -66,6 +66,10 @@ angular.module('timestamp', [])
   }
 
   $interval($scope.update, 1000);
+
+  setTimeout(function() {
+    $scope.$emit('timestampCtrl');
+  }, 0);
 })
 .directive('timestamp', function() {
   return {
