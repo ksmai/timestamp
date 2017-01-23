@@ -1,6 +1,6 @@
 'USE STRICT';
 
-module.exports = function(chrono, str) {
+module.exports = function(chrono, str, locale = false) {
   var date;
   // fall back to built-in Date for unix timestamp
   if( Number(str) ) {
@@ -17,7 +17,7 @@ module.exports = function(chrono, str) {
       }
     }
     
-    if(date) {
+    if(date && !locale) {
       date.setTime(
         date.getTime() - date.getTimezoneOffset() * 60 * 1000
       );
