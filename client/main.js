@@ -34,7 +34,7 @@ angular.module('timestamp', [])
     for(let i = 0; i < dates.length; i++) {
       dates[i] = parseDateStr($scope.times.inputs[i], true);
       $scope.validDates = !!($scope.validDates && dates[i]);
-      $scope.times.outputs[i] = dates[i]
+      $scope.times.outputs[i] = dates[i] && dates[i].getTime()
                                   ? !!$scope.opts.locales[i]
                                       ? dates[i].toLocaleString()
                                       : dates[i].toUTCString()
@@ -69,5 +69,10 @@ angular.module('timestamp', [])
   return {
     templateUrl: './templates/timestamp.html',
     controller: 'timestampCtrl'
-  }
+  };
+})
+.directive('timestampIntro', function() {
+  return {
+    templateUrl: './templates/timestamp-intro.html'
+  };
 });
