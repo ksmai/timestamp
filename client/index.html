@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-
 <html ng-app="timestamp">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
     <link href="style.css" rel="stylesheet">
+    <title>Timestamp Microservice</title>
   </head>
   <body>
 
+    <div class="container-fluid">
+      <timestamp></timestamp>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chrono-node/1.2.5/chrono.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.2/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
