@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var rename = require('gulp-rename');
 var browserify = require('gulp-browserify');
 var minifyHTML = require('gulp-minify-html');
 var cleanCSS = require('gulp-clean-css');
@@ -30,8 +31,9 @@ gulp.task('minhtml', function() {
 
 gulp.task('browserify', function() {
   gulp
-    .src('./client/app.js')
+    .src('./client/main.js')
     .pipe(browserify())
+    .pipe(rename('app.js'))
     .pipe(gulp.dest('./public'));
 });
 

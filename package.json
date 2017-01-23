@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "gulp test",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "gulp-concat": "2.6.1",
     "gulp-minify-html": "1.0.6",
     "gulp-mocha": "3.0.1",
+    "gulp-rename": "1.2.2",
     "mocha": "3.2.0",
     "superagent": "3.3.2"
   }
