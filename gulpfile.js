@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var babel = require('gulp-babel');
 var rename = require('gulp-rename');
 var browserify = require('gulp-browserify');
 var minifyHTML = require('gulp-minify-html');
@@ -33,6 +34,9 @@ gulp.task('browserify', function() {
   gulp
     .src('./client/main.js')
     .pipe(browserify())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(rename('app.js'))
     .pipe(gulp.dest('./public'));
 });
