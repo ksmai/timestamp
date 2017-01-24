@@ -15,4 +15,4 @@ It provides a REST API and a user interface using the MEAN stack.
     - calculating difference
 
 ## UI
-...
+http://ksmai.github.io/timestamp/
